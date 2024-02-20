@@ -3,16 +3,16 @@ import './index.css';
 import { withProviders } from 'app/providers';
 import { Navigate, Route, Routes } from 'react-router';
 import { NAME_FOR_404 } from 'shared/constants';
-import Layout from 'shared/ui/Layout/Layout';
 import HomePage from 'pages/home/HomePage';
 import CardPage from 'pages/card/CardPage';
 import NotFound404Page from 'pages/notFound404/NotFound404Page';
+import BaseLayout from './layouts/BaseLayout';
 
 const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path='/' element={<BaseLayout />}>
           <Route index element={<HomePage />} />
           <Route path=':id' element={<CardPage />} />
 
