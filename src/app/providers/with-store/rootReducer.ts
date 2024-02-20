@@ -1,9 +1,9 @@
 import { store } from './store';
 import { combineReducers } from 'redux';
-import { SinglePageSlice } from 'entities/stringCard';
+import { singleCardSlice } from 'entities/stringCard';
 
 export const rootReducer = combineReducers({
-  [SinglePageSlice.name]: SinglePageSlice.reducer,
+  [singleCardSlice.name]: singleCardSlice.reducer,
 });
 
 /**

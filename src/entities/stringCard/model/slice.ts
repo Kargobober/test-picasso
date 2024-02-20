@@ -1,21 +1,17 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 type TCard = {
-  number: number | string;
+  number: number;
   heading: string;
   description: string;
-};
+} | null;
 
 type TSingleCardState = {
   card: TCard;
 }
 
 const initialState: TSingleCardState = {
-  card: {
-    number: 0,
-    heading: '',
-    description: '',
-  },
+  card: null,
 };
 
 const singleCardSlice = createSlice({
@@ -27,6 +23,9 @@ const singleCardSlice = createSlice({
     },
     clearCard: (state) => {
       state.card = initialState.card;
+    },
+    findCard: (state, action: PayloadAction<number>) => {
+      state.card = state.cards.filter(el => el.number === action.payload);
     },
   },
 });

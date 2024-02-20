@@ -18,7 +18,7 @@ function StringCard({key, number, heading, description, to}: TProps) {
 
   const handleClick = () => {
     dispatch(actions.setCard({
-      number,
+      number: Number(number),
       heading,
       description
     }));
