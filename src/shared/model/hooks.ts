@@ -4,8 +4,6 @@ import {
   useSelector as useSelectorOrigin
 } from 'react-redux';
 
-import { AppDispatch, RootState } from './rootReducer';
-
 // Теперь этот хук «знает» структуру хранилища
 export const useSelector: TypedUseSelectorHook<RootState> = useSelectorOrigin;
 

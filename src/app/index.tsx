@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 import { withProviders } from 'app/providers';
 import { Navigate, Route, Routes } from 'react-router';
-import { NAME_FOR_404 } from 'shared/constants';
+import { NAME_FOR_404 } from 'shared/router';
 import HomePage from 'pages/home/HomePage';
 import CardPage from 'pages/card/CardPage';
 import NotFound404Page from 'pages/notFound404/NotFound404Page';
