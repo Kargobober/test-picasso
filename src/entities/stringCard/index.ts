@@ -1,2 +1,1 @@
-export * as singleCardSlice from './model/slice';
-export * as singleCardSelectors from './model/selector'
+export { default as StringCard } from './ui/StringCard/StringCard';

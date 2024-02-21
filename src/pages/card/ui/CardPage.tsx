@@ -1,30 +1,34 @@
 import { useEffect } from 'react';
 import { SingleCard } from 'entities/singleCard';
-import { Link, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'shared/model/hooks';
-import { singleCardSelectors, singleCardSlice } from 'entities/stringCard';
 import styles from './CardPage.module.css';
+import { useGetPostByIdQuery } from 'shared/api';
+import { NAME_FOR_404 } from 'shared/router';
 
 const CardPage = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
+  const { data, isUninitialized, isLoading, isFetching } = useGetPostByIdQuery(Number(id));
 
-  const singleCard = useSelector(singleCardSelectors.getSingleCard);
-
-  useEffect(() => {
-    dispatch(singleCardSlice.actions.findCard( Number(id) ));
-  }, [id]);
-
-  return (
-    <section className={styles.section}>
-      <Link to='/' className='text'> ← Назад</Link>
-      <SingleCard
-        number={singleCard?.number || '...'}
-        heading={singleCard?.heading || '...'}
-        description={singleCard?.description || '...'}
-      />
-    </section>
-  )
+  if (isFetching) {
+    return (<div>Загрузка</div>)
+  } else {
+    return (
+      <section className={styles.section}>
+        <Link to='/' className='text'> ← Назад</Link>
+        {data ? (
+          <SingleCard
+            number={data.id}
+            heading={data.title}
+            description={data.body}
+          />
+        ) : (
+          <Navigate to={NAME_FOR_404} />
+        )}
+      </section>
+    )
+  }
 }
 
 export default CardPage;

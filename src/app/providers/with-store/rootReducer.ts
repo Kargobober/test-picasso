@@ -1,9 +1,9 @@
 import { store } from './store';
 import { combineReducers } from 'redux';
-import { singleCardSlice } from 'entities/stringCard';
+import { placeholderApi } from 'shared/api/placeholderApi';
 
 export const rootReducer = combineReducers({
-  [singleCardSlice.name]: singleCardSlice.reducer,
+  [placeholderApi.reducerPath]: placeholderApi.reducer,
 });
 
 /**
