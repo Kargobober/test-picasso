@@ -1,5 +1,5 @@
 import Card from 'shared/ui/components/Card/Card';
-import styles from './StringCard.module.css';
+import styles from './SingleCard.module.css';
 
 type TProps = {
   number: string | number;
@@ -9,9 +9,10 @@ type TProps = {
 
 function SingleCard({number, heading, description}: TProps) {
   return (
-    <Card
-      heading={`${number} ${heading} ${description}`}
-    />
+    <>
+      <h4>{'№' + number + ':' + ' ' + heading}</h4>
+      <p>{description}</p>
+    </>
   )
 }
 

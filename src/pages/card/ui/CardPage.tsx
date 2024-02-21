@@ -16,7 +16,7 @@ const CardPage = () => {
   } else {
     return (
       <section className={styles.section}>
-        <Link to='/' className='text'> ← Назад</Link>
+        <Link to='/' className='text mt-4'> ← Назад</Link>
         {data ? (
           <SingleCard
             number={data.id}
