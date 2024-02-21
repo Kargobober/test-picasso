@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 type TProps = {
   all?: boolean;
@@ -11,7 +12,7 @@ type TProps = {
 
 const Contacts = (props: TProps) => {
   return (
-    <div>Contacts</div>
+    <Link to='https://github.com/Kargobober' target='_blank'>Contact</Link>
   )
 }
 
