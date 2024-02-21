@@ -5,3 +5,8 @@
 .headingL3 {
   text-align: start;
 }
+
+.section {
+  overflow: hidden;
+  max-height: 740px;
+}

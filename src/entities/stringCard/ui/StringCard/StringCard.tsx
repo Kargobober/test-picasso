@@ -3,14 +3,14 @@ import Card from 'shared/ui/components/Card/Card';
 import styles from './StringCard.module.css';
 
 type TProps = {
-  key: string | number;
+  keyMy: string | number;
   number: string | number;
   heading: string;
   description: string;
   to: string;
 };
 
-function StringCard({key, number, heading, description, to}: TProps) {
+function StringCard({keyMy, number, heading, description, to}: TProps) {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -19,7 +19,7 @@ function StringCard({key, number, heading, description, to}: TProps) {
 
   return (
     <Card
-      key={key}
+      keyMy={keyMy}
       heading={`№${number}: ${heading}. ${description}`}
     >
       <Link
