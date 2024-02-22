@@ -1,14 +1,22 @@
-import React from 'react';
+import { useEffect } from 'react';
 import './index.css';
 import { withProviders } from 'app/providers';
-import { Navigate, Route, Routes } from 'react-router';
+import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router';
 import { NAME_FOR_404 } from 'shared/router';
 import BaseLayout from './layouts/BaseLayout';
 import { HomePage } from 'pages/home';
 import { CardPage } from 'pages/card';
 import { NotFound404Page } from 'pages/notFound404';
+import { REPONAME } from 'shared/config/constants';
 
 const App = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && location.pathname === `/${REPONAME}`) navigate('/');
+  }, []);
+
   return (
     <div className="App">
       <Routes>
