@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/test-picasso/static/css/main.9eb3b59e.css",
+    "main.js": "/test-picasso/static/js/main.b900c916.js",
+    "static/js/453.dca16068.chunk.js": "/test-picasso/static/js/453.dca16068.chunk.js",
+    "static/media/Inter-Medium.woff": "/test-picasso/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff": "/test-picasso/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff": "/test-picasso/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2": "/test-picasso/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2": "/test-picasso/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2": "/test-picasso/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "index.html": "/test-picasso/index.html",
+    "main.9eb3b59e.css.map": "/test-picasso/static/css/main.9eb3b59e.css.map",
+    "main.b900c916.js.map": "/test-picasso/static/js/main.b900c916.js.map",
+    "453.dca16068.chunk.js.map": "/test-picasso/static/js/453.dca16068.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9eb3b59e.css",
+    "static/js/main.b900c916.js"
+  ]
+}
