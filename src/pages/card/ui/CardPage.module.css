@@ -1,0 +1,8 @@
+.section {
+  width: 70%;
+  margin: 0 auto;
+  background-color: aquamarine;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: calc(var(--offset-base-size) * 4);
+}
