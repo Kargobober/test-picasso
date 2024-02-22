@@ -1,5 +1,9 @@
 # Test Picasso
-## Test task on the topic ↓
+
+## Ссылка на проект
+https://kargobober.github.io/test-picasso/
+
+## Test task on the topic
 * TypeScript
 * React
 * React Router 6
